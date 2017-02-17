@@ -1,6 +1,7 @@
 div {
   border: solid 1px black;
   width: 200px;
+  margin: auto;
 
 }
 
@@ -9,6 +10,17 @@ text-align: center;
   width: 200px;
 }
 
-h1{
+#head{
   text-align: center;
+  font-size: 50px;
+}
+
+h2{
+  text-align: center;
+}
+
+form{
+  margin: auto;
+  border: black 1px solid;
+  width: 200px;
 }

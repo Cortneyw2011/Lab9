@@ -10,6 +10,9 @@ var item5 = {name: 'oatmeal',
             price: 1.49};
 total=0;
 
+
+
+
 var list = [item1, item2, item3, item4, item5];
 var grocerList = document.createElement('div');
 var fullGroceries = document.createElement('p');
@@ -21,9 +24,10 @@ var totalFinal = document.createElement('p');
 
 for (var i = 0; i<list.length; i++){
 
+
 //with each iteration
     fullGroceries.innerHTML += ( list[i].name+ ': ' +list[i].price +' \n');
-//append fullGroceries <div> to grocerList <div>
+//append fullGroceries <div> to grocerList <div> this is appending a div to a paragraph
    fullGroceries.appendChild(grocerList);
 
 
@@ -38,10 +42,25 @@ for (var i = 0; i<list.length; i++){
 
   }
 }
+
+
+
 //append grocerList and total Final to the body
     document.body.appendChild(fullGroceries);
      document.body.appendChild(totalFinal);
 
-//var grocerList = document.createElement ('div');
-   //grocerList.innerHTML = '<script> groceries(); </script>';
-   //document.body.appendChild (grocerList);
+
+
+
+    function grabInput(){
+      //get input values
+      //make a new object
+      //add objects to groceries array
+      var newItem = document.getElementById('item').value;
+      var newPrice = document.getElementById('price').value;
+      var newObject = {name: newItem,
+                  price: newPrice};
+      list.push(newObject);
+    }
+
+grabInput();
